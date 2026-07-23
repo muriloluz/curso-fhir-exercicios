@@ -1,0 +1,140 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-99999",
+    "value": "TODO-cnes-hifen-uuid-novo"
+  },
+  "type": "document",
+  "timestamp": "TODO-instante-da-montagem",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1a2b3c40-5d6e-4f70-8a9b-4c5d6e7f8091",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegistroAtendimentoClinico"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Registro de Atendimento Clínico</b> — atenção básica. Paciente CPF 12345678909, atendida em 22/07/2026 na UBS CNES 2337545. Diagnóstico: J06.9 (CID-10). Procedimento: 0301010030 (Tabela SUS). Prescrição: salbutamol xarope, via bucal. Observações: peso 72,5 kg; altura 175 cm. Alergia: dipirona (confirmada, criticidade alta — urticária). Plano de cuidados: hidratação, repouso e retorno em 7 dias.</p></div>"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+              "code": "RAC"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+                "code": "01"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "identifier": {
+            "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "12345678909"
+          }
+        },
+        "date": "2026-07-22T09:45:00-03:00",
+        "author": [
+          {
+            "identifier": {
+              "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "value": "2337545"
+            }
+          }
+        ],
+        "title": "Registro de Atendimento Clínico",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "TODO-urn-do-encounter"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "TODO-urn-da-condition"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "TODO-urn-do-procedure"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:2e3f4a50-6b7c-4d8e-9fa0-5c6d7e8f90a2"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:8b9c0da0-1e2f-4a3b-8c4d-e5f60718293a"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:9c0d1eb0-2f3a-4b4c-9d5e-f60718293a4b"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:5f6a7b80-9c0d-4e1f-a2b3-c4d5e6f708a9"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:a1b2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9d0e1f30-4a5b-4c6d-8e7f-3b4c5d6e7f80",
+      "resource": {
+        "COLE-AQUI": "conteúdo de etapa-1-encounter.json (corrigido e validado)"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b6f3a10-2c1e-4a7b-9a44-1f2ab3c4d5e6",
+      "resource": {
+        "COLE-AQUI": "conteúdo de etapa-2-condition.json"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c8d9e20-3f4a-4b5c-8d6e-2a3b4c5d6e7f",
+      "resource": {
+        "COLE-AQUI": "conteúdo de etapa-3-procedure.json"
+      }
+    },
+    {
+      "COLE-AQUI": "os 9 blocos de etapa-4-blocos-prontos.json (cada item já vem com fullUrl + resource) — substitua este objeto pelos 9"
+    }
+  ]
+}

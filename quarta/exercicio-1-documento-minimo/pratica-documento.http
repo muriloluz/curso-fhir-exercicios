@@ -1,0 +1,21 @@
+### Exercício 1 — validação e envio via API (REST Client / VS Code)
+### Ajuste o host para o HAPI da sala (ou use o público hapi.fhir.org/baseR4)
+@host = http://localhost:8080/fhir
+
+### 1) Validar o template (repare nos issues do OperationOutcome)
+POST {{host}}/Bundle/$validate
+Content-Type: application/fhir+json
+
+< ./template-documento.json
+
+### 2) Validar o SEU arquivo corrigido (salve como meu-documento.json nesta pasta)
+POST {{host}}/Bundle/$validate
+Content-Type: application/fhir+json
+
+< ./meu-documento.json
+
+### 3) Só depois de válido: enviar de verdade (o servidor devolve id no Location)
+POST {{host}}/Bundle
+Content-Type: application/fhir+json
+
+< ./meu-documento.json

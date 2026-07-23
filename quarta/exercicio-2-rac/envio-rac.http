@@ -1,0 +1,19 @@
+### Exercício 2 — envio e recuperação do RAC (REST Client / VS Code)
+### Ajuste o host para o HAPI da sala
+@host = http://localhost:8080/fhir
+
+### 1) Enviar o documento (repare no Location do retorno: Bundle/<id>/_history/1)
+POST {{host}}/Bundle
+Content-Type: application/fhir+json
+
+< ./meu-rac.json
+
+### 2) Recuperar pelo id (copie o <id> do Location acima)
+GET {{host}}/Bundle/COLOQUE-O-ID-AQUI
+
+### 3) Buscar pelo identifier do DOCUMENTO (a identidade que você criou no bdl-9)
+GET {{host}}/Bundle?identifier=http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-99999|SEU-VALOR-AQUI
+
+### 4) Bônus: buscar documentos pela paciente, via a 1ª entry (search param especial
+###    "composition" — é assim que uma central de documentos consulta por indivíduo)
+GET {{host}}/Bundle?composition.patient.identifier=12345678909

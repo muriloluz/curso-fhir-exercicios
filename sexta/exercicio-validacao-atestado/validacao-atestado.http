@@ -1,0 +1,32 @@
+### mt-45 — validação das instâncias do atestado (REST Client / VS Code)
+### Pré-requisito: HAPI da sala com os DOIS packages carregados (rnds-lite 0.5.0 + br.curso.atestado 0.1.0)
+### Ajuste o host para o HAPI da sala
+@host = http://localhost:8080/fhir
+
+### 1) Validar o exemplo VÁLIDO (esperado: sem errors; warning do NamingSystem de CPF é ok)
+POST {{host}}/Bundle/$validate
+Content-Type: application/fhir+json
+
+< ./instancias/atestado-exemplo-01.json
+
+### 2) Validar o exemplo INVÁLIDO (esperado: erro de slice — seção afastamento 1..1 ausente)
+POST {{host}}/Bundle/$validate
+Content-Type: application/fhir+json
+
+< ./instancias/atestado-exemplo-02-invalido.json
+
+### 3) Bônus (quem flui): a MESMA Composition sem meta.profile passa na validação BASE.
+###    Extraia a Composition do exemplo-01, apague o "meta", e valide avulsa:
+###    passa — mas não prova conformidade com o AtestadoMedico (mt-26: validar contra o quê?).
+POST {{host}}/Composition/$validate
+Content-Type: application/fhir+json
+
+{
+  "resourceType": "Composition",
+  "text": { "status": "generated", "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Atestado sem meta.profile — valida na BASE, não no perfil.</p></div>" },
+  "status": "final",
+  "type": { "coding": [{ "system": "https://exemplo-curso-fhir.github.io/atestado-ig/CodeSystem/tipo-documento-central", "code": "ATM" }] },
+  "date": "2026-07-25T10:30:00-03:00",
+  "title": "Atestado sem seções (base permite!)",
+  "author": [{ "display": "Dr. João Sousa" }]
+}

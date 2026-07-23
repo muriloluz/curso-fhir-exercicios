@@ -1,0 +1,24 @@
+### Exercício 2 — validar o RAC no servidor (REST Client / VS Code)
+### Ajuste o host para o HAPI da sala
+@host = http://localhost:8080/fhir
+
+### 1) Validar uma etapa avulsa (ex.: o Encounter corrigido)
+POST {{host}}/Encounter/$validate
+Content-Type: application/fhir+json
+
+< ./etapas/etapa-1-encounter.json
+
+### 2) Validar o SEU RAC completo (salve como meu-rac.json nesta pasta)
+POST {{host}}/Bundle/$validate
+Content-Type: application/fhir+json
+
+< ./meu-rac.json
+
+### 3) Curiosidade didática: a Composition NÃO valida sozinha — as seções
+###    discriminam por entry.resolve(), que só resolve dentro do Bundle.
+###    Teste você mesmo: copie AQUI só a Composition do seu Bundle (sem as
+###    outras entries) e leia os erros de slice para entender:
+POST {{host}}/Composition/$validate
+Content-Type: application/fhir+json
+
+< ./minha-composition-avulsa.json

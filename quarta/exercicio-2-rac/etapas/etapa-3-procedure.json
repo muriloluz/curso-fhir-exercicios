@@ -1,0 +1,64 @@
+{
+  "resourceType": "Procedure",
+  "meta": {
+    "profile": [
+      "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProcedimentoRealizado-1.0"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Procedimento concluído em 22/07/2026: 0301010030 — consulta de profissional de nível superior na atenção primária (Tabela SUS), quantidade 1. Paciente CPF 12345678909.</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQuantidade-1.0",
+      "valuePositiveInt": "TODO-quantidade-inteiro-positivo"
+    }
+  ],
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+        "code": "TODO-codigo-tabela-sus"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+      "value": "12345678909"
+    }
+  },
+  "performedDateTime": "TODO-data-hora-da-realizacao",
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+            "code": "TODO-cbo-do-profissional"
+          }
+        ]
+      },
+      "actor": {
+        "identifier": {
+          "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLotacaoProfissional-1.0",
+          "value": "898001160660034-2337545"
+        }
+      },
+      "extension": [
+        {
+          "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0",
+          "valueInteger": 1234567
+        }
+      ],
+      "onBehalfOf": {
+        "identifier": {
+          "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+          "value": "2337545"
+        }
+      }
+    }
+  ]
+}
