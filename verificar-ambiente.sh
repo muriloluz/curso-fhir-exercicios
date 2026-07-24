@@ -17,6 +17,14 @@ echo "== Ferramentas =="
 verificar "Java 21+"  "command -v java"  "java -version 2>&1"            "instale um JDK 21 (ex.: Temurin: https://adoptium.net)"
 verificar "Node 20+"  "command -v node"  "node --version"                "instale o Node.js LTS: https://nodejs.org"
 verificar "SUSHI"     "command -v sushi" "sushi --version"               "npm install -g fsh-sushi (necessário só para o rac-fsh)"
+verificar "Docker"    "command -v docker" "docker --version"             "instale o Docker (para o servidor FHIR local: hapi-local/): https://docs.docker.com/get-docker/"
+
+echo "== Servidor FHIR local (hapi-local/) =="
+if curl -s -o /dev/null -m 3 http://localhost:8080/fhir/metadata 2>/dev/null; then
+  echo "  [ok]    HAPI respondendo em http://localhost:8080/fhir"
+else
+  echo "  [info]  HAPI não está no ar — para subir: ver hapi-local/README.md"
+fi
 
 echo "== Arquivos =="
 if [[ -f recursos/validador/validator_cli.jar ]]; then

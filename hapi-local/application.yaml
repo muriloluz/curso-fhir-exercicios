@@ -1,0 +1,12 @@
+hapi:
+  fhir:
+    fhir_version: R4
+    implementationguides:
+      rnds-lite:
+        packageUrl: file:///packages/rnds-lite-0.5.0.tgz
+        name: br.ufg.cgis.rnds-lite
+        version: 0.5.0
+      atestado:
+        packageUrl: file:///packages/br.curso.atestado-0.1.0.tgz
+        name: br.curso.atestado
+        version: 0.1.0

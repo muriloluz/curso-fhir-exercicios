@@ -12,6 +12,7 @@ traga o repositório pronto para a aula.
 |---|---|---|
 | [quarta/](quarta/) | quarta-feira | Documento mínimo (60 min), narrativa (5 min), construção do RAC (90 min) — versões JSON e FSH |
 | [sexta/](sexta/) | sexta-feira | Validação de instâncias contra o perfil do projeto final (Central de Atestado Médico) |
+| [hapi-local/](hapi-local/) | — | **Seu servidor FHIR** (docker, 1 comando) com os packages do curso já carregados |
 | [recursos/](recursos/) | — | `rnds-lite-0.5.0.tgz` (package de perfis do curso) + pasta do validador |
 
 Os **gabaritos** serão liberados após cada exercício, no repositório
@@ -33,8 +34,15 @@ Os **gabaritos** serão liberados após cada exercício, no repositório
 git clone <URL-deste-repositorio>
 cd curso-fhir-exercicios
 ./baixar-validador.sh      # baixa o validator_cli.jar para recursos/validador/
-./verificar-ambiente.sh    # confere java/node/sushi/jar
+./verificar-ambiente.sh    # confere java/node/sushi/docker/jar
+cd hapi-local && docker run -d --name hapi-curso -p 8080:8080 \
+  -v $(pwd)/application.yaml:/app/config/application.yaml:ro \
+  -v $(pwd)/packages:/packages:ro hapiproject/hapi:latest   # seu servidor FHIR
 ```
+
+Os `.http` dos exercícios já apontam para `http://localhost:8080/fhir` — com o
+servidor local no ar, nada precisa ser ajustado (na sala também haverá um HAPI
+compartilhado como alternativa).
 
 Conexão com a internet é necessária na primeira validação (o validador baixa
 packages base e consulta o servidor de terminologia `tx.fhir.org`).
