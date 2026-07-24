@@ -14,6 +14,9 @@ GET {{host}}/Bundle/COLOQUE-O-ID-AQUI
 ### 3) Buscar pelo identifier do DOCUMENTO (a identidade que você criou no bdl-9)
 GET {{host}}/Bundle?identifier=http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-99999|SEU-VALOR-AQUI
 
-### 4) Bônus: buscar documentos pela paciente, via a 1ª entry (search param especial
-###    "composition" — é assim que uma central de documentos consulta por indivíduo)
+### 4) Bônus TEÓRICO: a spec define o search param "composition" (busca documents
+###    pela 1ª entry). No HAPI ele exige configuração extra (SearchParameter
+###    custom) — sem ela, retorna total 0. Rode, veja o 0, e guarde a lição:
+###    capabilities variam por servidor. Na sexta resolvemos isso do jeito
+###    portável (DocumentReference como índice).
 GET {{host}}/Bundle?composition.patient.identifier=12345678909
