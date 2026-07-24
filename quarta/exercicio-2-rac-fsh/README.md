@@ -21,7 +21,7 @@ tar -xzf ../../recursos/rnds-lite-0.5.0.tgz -C ~/.fhir/packages/br.ufg.cgis.rnds
 sushi .          # compila → fsh-generated/resources/Bundle-rac-bundle-completo.json
 # na raiz do repositório:
 java -jar recursos/validador/validator_cli.jar \
-     exercicios/exercicio-2-rac-fsh/fsh-generated/resources/Bundle-rac-bundle-completo.json \
+     quarta/exercicio-2-rac-fsh/fsh-generated/resources/Bundle-rac-bundle-completo.json \
      -version 4.0.1 -ig recursos/rnds-lite-0.5.0.tgz
 ```
 

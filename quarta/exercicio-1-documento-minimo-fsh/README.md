@@ -10,7 +10,7 @@ mas você corrige o **FHIR Shorthand** e compila com o SUSHI.
 sushi .                       # compila FSH → fsh-generated/resources/
 # na raiz do repositório:
 java -jar recursos/validador/validator_cli.jar \
-     exercicios/exercicio-1-documento-minimo-fsh/fsh-generated/resources/Bundle-documento-minimo.json \
+     quarta/exercicio-1-documento-minimo-fsh/fsh-generated/resources/Bundle-documento-minimo.json \
      -version 4.0.1
 ```
 

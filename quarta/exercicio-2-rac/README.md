@@ -31,7 +31,7 @@ Valide cada arquivo assim (da raiz do repositório; ajuste o nome do arquivo):
 
 ```bash
 java -jar recursos/validador/validator_cli.jar \
-     exercicios/exercicio-2-rac/etapas/etapa-1-encounter.json \
+     quarta/exercicio-2-rac/etapas/etapa-1-encounter.json \
      -version 4.0.1 -ig recursos/rnds-lite-0.5.0.tgz
 ```
 

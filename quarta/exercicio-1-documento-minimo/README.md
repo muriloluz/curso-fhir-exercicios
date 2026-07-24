@@ -13,7 +13,7 @@ Sem perfis brasileiros ainda — só as regras universais do FHIR.
 ```bash
 # a partir da RAIZ do repositório
 java -jar recursos/validador/validator_cli.jar \
-     exercicios/exercicio-1-documento-minimo/template-documento.json -version 4.0.1
+     quarta/exercicio-1-documento-minimo/template-documento.json -version 4.0.1
 ```
 
 Resultado esperado: **4 erros e 3 warnings**. Isso é proposital — cada mensagem
