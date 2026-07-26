@@ -10,3 +10,7 @@ hapi:
         packageUrl: file:///packages/br.curso.atestado-0.1.0.tgz
         name: br.curso.atestado
         version: 0.1.0
+      loinc:
+        packageUrl: file:///packages/loinc-package.tgz
+        name: br.go.saude.fhir.loinc
+        version: 0.0.5

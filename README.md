@@ -12,6 +12,7 @@ traga o repositório pronto para a aula.
 |---|---|---|
 | [quarta/](quarta/) | quarta-feira | Documento mínimo (60 min), narrativa (5 min), construção do RAC (90 min) — versões JSON e FSH |
 | [sexta/](sexta/) | sexta-feira | Validação de instâncias contra o perfil do projeto final (Central de Atestado Médico) |
+| [questoes/](questoes/) | ambos | Questões de fixação de cada bloco teórico (10 itens a/b/c) — sem gabarito |
 | [hapi-local/](hapi-local/) | — | **Seu servidor FHIR** (docker, 1 comando) com os packages do curso já carregados |
 | [recursos/](recursos/) | — | `rnds-lite-0.5.0.tgz` (package de perfis do curso) + pasta do validador |
 

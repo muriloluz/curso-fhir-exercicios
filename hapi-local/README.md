@@ -40,6 +40,7 @@ docker rm -f hapi-curso        # remover TUDO (dados inclusive) e recomeçar
 |---|---|
 | `br.ufg.cgis.rnds-lite 0.5.0` | perfis/terminologias BR — validação do RAC (quarta) |
 | `br.curso.atestado 0.1.0` | perfil `AtestadoMedico` — exercício de validação (sexta) |
+| `br.go.saude.fhir.loinc 0.0.5` | CodeSystem LOINC 2.78 (~124k códigos) — elimina os warnings `CodeSystem could not be found: http://loinc.org` no `$validate` |
 
 Os `.tgz` estão em [packages/](packages/). O servidor indexa os packages no boot —
 o `POST /Bundle/$validate` valida contra esses perfis automaticamente quando a
