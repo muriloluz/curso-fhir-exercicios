@@ -14,7 +14,7 @@ verificar() { # nome, comando, dica
 }
 
 echo "== Ferramentas =="
-verificar "Java 21+"  "command -v java"  "java -version 2>&1"            "instale um JDK 21 (ex.: Temurin: https://adoptium.net)"
+verificar "Java 21+"  "java -version 2>&1 | head -1 | grep -qE 'version \"(2[1-9]|[3-9][0-9])'" "java -version 2>&1" "instale um JDK 21+ (ex.: Temurin: https://adoptium.net) — a mini-app da sexta exige 21"
 verificar "Node 20+"  "command -v node"  "node --version"                "instale o Node.js LTS: https://nodejs.org"
 verificar "SUSHI"     "command -v sushi" "sushi --version"               "npm install -g fsh-sushi (necessário só para o rac-fsh)"
 verificar "Docker"    "command -v docker" "docker --version"             "instale o Docker (para o servidor FHIR local: hapi-local/): https://docs.docker.com/get-docker/"

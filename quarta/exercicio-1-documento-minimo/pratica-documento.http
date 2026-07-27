@@ -1,6 +1,6 @@
 ### Exercício 1 — validação e envio via API (REST Client / VS Code)
 ### Ajuste o host para o HAPI da sala (ou use o público hapi.fhir.org/baseR4)
-@host = http://localhost:8080/fhir
+@host = http://hapi-curso:8080/fhir
 
 ### 1) Validar o template (repare nos issues do OperationOutcome)
 POST {{host}}/Bundle/$validate

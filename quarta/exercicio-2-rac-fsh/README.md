@@ -32,7 +32,8 @@ Rode `sushi .` no template **antes de mexer em qualquer coisa**:
 - O **SUSHI acusa 3 erros** — os elementos obrigatórios que estão comentados
   (`period.end`, `valuePositiveInt` da quantidade, `performedDateTime`). Ele conhece
   os perfis (dependência no sushi-config.yaml) e cobra cardinalidade **no build**.
-- Mesmo com erros, o SUSHI gera o JSON. O **validador acusa ~41 erros** — não se
+- Mesmo com erros, o SUSHI gera o JSON. O **validador acusa ~40 erros** (o total
+  exato varia um pouco com o servidor de terminologia) — não se
   assuste: são os códigos `TODO-*` reprovando nos ValueSets, em cascata. Cada
   mensagem aponta o elemento e o CodeSystem onde buscar o código certo.
 
