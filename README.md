@@ -1,5 +1,9 @@
 # curso-fhir-exercicios — Interoperabilidade em Saúde com HL7® FHIR®
 
+Link do diretório compartilhado do google drive com o conteúdo publico de amanha. 
+
+https://drive.google.com/drive/folders/1uDgdomPYqcprnphiwypUCmt6vTsoUNfQ?usp=sharing
+
 Exercícios práticos do curso (quarta e sexta). Clone, prepare o ambiente e
 traga o repositório pronto para a aula.
 
